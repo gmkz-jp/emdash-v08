@@ -8,20 +8,20 @@
 		{
 			"binding": "DB",
 			"database_name": "emdash-v08",
-			// Run `wrangler d1 create my-emdash-site` and paste the real ID here for deploy
 			"database_id": "1196f079-3999-41d2-ac63-9302aca0ec7b",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
-			"bucket_name": "emdash-v08","preview_bucket_name": "emdash-v08",
+			"bucket_name": "emdash-v08",
+			"preview_bucket_name": "emdash-v08",
 		},
 	],
-	// Worker Loader for plugin sandboxing
-	"worker_loaders": [
+	"kv_namespaces": [
 		{
-			"binding": "LOADER",
+			"binding": "SESSION",
+			"id": "3c607ab893744b169e25954e7b5e1a3f",
 		},
 	],
 }
