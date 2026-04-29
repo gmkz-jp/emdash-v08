@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "emdash-v08",
+	"main": "./src/worker.ts",
+	"compatibility_date": "2026-02-24",
+	"compatibility_flags": ["nodejs_compat"],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "emdash-v08",
+			// Run `wrangler d1 create my-emdash-site` and paste the real ID here for deploy
+			"database_id": "1196f079-3999-41d2-ac63-9302aca0ec7b",
+		},
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "emdash-v08","preview_bucket_name": "emdash-v08",
+		},
+	],
+	// Worker Loader for plugin sandboxing
+	"worker_loaders": [
+		{
+			"binding": "LOADER",
+		},
+	],
+}
